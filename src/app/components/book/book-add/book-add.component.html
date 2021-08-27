@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Thêm sách</h2>
+  <form *ngIf="formAdd" [formGroup]="formAdd" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>Mã sách</label>
+      <input formControlName="id" type="number" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Tên sách</label>
+      <input formControlName="title" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Tên tác giả</label>
+      <input formControlName="author" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Mô tả</label>
+      <br>
+      <textarea formControlName="description" cols="30" rows="10"></textarea>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>

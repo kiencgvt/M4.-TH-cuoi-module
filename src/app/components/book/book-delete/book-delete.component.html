@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Xóa sách</h2>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h5 class="pull-right">Tên sách: {{ book.title }}</h5>
+        <h4>Tác giả: {{ book.author }}</h4>
+        <p>Mô tả: </p>
+        <p>{{ book.description }}</p>
+      </div>
+    </div>
+  </div>
+  <button (click)="delete()" class="btn btn-danger">Xóa sách</button>
+  <br>
+  <br>
+  <button routerLink="/books" class="btn btn-primary">Thoát</button>
+</div>
