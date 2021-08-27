@@ -18,7 +18,6 @@ export class BookAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.formAdd = this.fb.group({
-      id: [''],
       title: [''],
       author: [''],
       description: [''],
@@ -29,6 +28,7 @@ export class BookAddComponent implements OnInit {
     let data = this.formAdd?.value
     this.bookService.addBook(data).subscribe(res => {
       this.router.navigate(['books']).then();
+      alert('Thêm thành công');
     })
   }
 }

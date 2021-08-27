@@ -24,7 +24,6 @@ export class BookEditComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.bookService.getBookDetail(this.id).subscribe( res => {
       this.formEdit = this.fb.group({
-        id: [res.id],
         title: [res.title],
         author: [res.author],
         description: [res.description],
@@ -36,6 +35,7 @@ export class BookEditComponent implements OnInit {
     let data = this.formEdit?.value;
     this.bookService.editBook(data, this.id).subscribe( res => {
       this.router.navigate(['books']).then();
+      alert('Sửa thành công');
     })
   }
 }

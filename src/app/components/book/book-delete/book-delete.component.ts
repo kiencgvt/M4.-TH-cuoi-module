@@ -33,6 +33,7 @@ export class BookDeleteComponent implements OnInit {
       this.bookService.deleteBook(this.id).subscribe( res => {
         console.log(res);
         this.router.navigate(['books']).then();
+        alert('Xóa thành công');
       })
     }
   }
